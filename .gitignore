@@ -1,0 +1,12 @@
+*.log
+*.tlog
+*.db
+*.exe
+*.ilk
+*.pdb
+*.idb
+*.opendb
+Build/Windows/Debug/
+*.sdf
+*.opensdf
+Sample/0_DevTest/Debug/

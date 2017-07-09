@@ -1,0 +1,12 @@
+#pragma once
+
+SIMD_INLINE void SIMD4X4F_TRANSPOSE_INPLACE(SIMD4X4F *s) 
+{
+	_MM_TRANSPOSE4_PS(s->x, s->y, s->z, s->w);
+}
+
+SIMD_INLINE void SIMD4X4F_TRANSPOSE(const SIMD4X4F *s, SIMD4X4F *out) 
+{
+	*out = *s;
+	SIMD4X4F_TRANSPOSE_INPLACE(out);
+}

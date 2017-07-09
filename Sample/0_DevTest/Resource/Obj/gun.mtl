@@ -1,0 +1,50 @@
+newmtl blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Tex_0223_0.psd.png
+bump Tex_0223_1.psd.png 
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Tex_0223_2.psd.png
+newmtl blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Tex_0221_0.psd.png
+bump Tex_0221_1.psd.png  
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Tex_0221_2.psd.png
+newmtl blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Tex_0220_0.psd.png
+bump Tex_0220_1.psd.png  
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Tex_0220_2.psd.png
+newmtl blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Tex_0222_0.psd.png
+bump Tex_0222_1.psd.png  
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Tex_0222_2.psd.png
+newmtl blinn5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Tex_0219_0.psd.png
+bump Tex_0219_1.psd.png  
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Tex_0219_2.psd.png

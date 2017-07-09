@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Core\Application\Base\Application.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Base\ApplicationSetting.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Base\BaseWindow.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Base\Command.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Base\IMainLoop.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\GLFW\GLMainLoop.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\GLFW\GLWindow.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Windows\MSMainLoop.cpp" />
+    <ClCompile Include="..\..\Source\Core\Application\Windows\MSWindow.cpp" />
+    <ClCompile Include="..\..\Source\Core\Engine\MEngine.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\Base\EventSystem.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\Base\IEventListener.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\Extensions\HIDEvent\HIDEvent.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\Extensions\HIDEvent\IEvent.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\GLFW\GLFWMessageLoop.cpp" />
+    <ClCompile Include="..\..\Source\Core\Event\Windows\MSMessageLoop.cpp" />
+    <ClCompile Include="..\..\Source\Core\Foundation\HName.cpp" />
+    <ClCompile Include="..\..\Source\Core\Foundation\HObject.cpp" />
+    <ClCompile Include="..\..\Source\Core\Logging\MLog.cpp" />
+    <ClCompile Include="..\..\Source\Core\Logging\MLogToFile.cpp" />
+    <ClCompile Include="..\..\Source\Core\Logging\MLogToOutputWindow.cpp" />
+    <ClCompile Include="..\..\Source\Core\Mathematics\MathUtils.cpp" />
+    <ClCompile Include="..\..\Source\Core\Memory\MemChunk.cpp" />
+    <ClCompile Include="..\..\Source\Core\Memory\MemPool.cpp" />
+    <ClCompile Include="..\..\Source\Core\Memory\MemStack.cpp" />
+    <ClCompile Include="..\..\Source\Core\Memory\MemTree.cpp" />
+    <ClCompile Include="..\..\Source\Core\StringUtils\StringUtils.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Component.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Functional\ControllerComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Functional\FunctionalComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\CameraComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\DirectionalLightComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\FlashLightComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\LightComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\MeshComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\MTransform.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\PerspectiveCameraComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\PointLightComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\PrimitiveComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Component\Scene\SceneComponent.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Controller\CameraMotionController.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Controller\IController.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\Controller\MotionController.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\GameInstance.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\GameoObject\GameObject.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\World.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\WorldContext.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\World\WorldCameraManager.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\World\WorldLightManager.cpp" />
+    <ClCompile Include="..\..\Source\GamePlay\World\WorldUpdateManager.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\FileSystem.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\ImageLoader.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\Image\TexImage.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\ModelLoader.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\Model\Mesh.cpp" />
+    <ClCompile Include="..\..\Source\Independent\File\Model\Model.cpp" />
+    <ClCompile Include="..\..\Source\Independent\Timer\MTime.cpp" />
+    <ClCompile Include="..\..\Source\Independent\Timer\MTimer.cpp" />
+    <ClCompile Include="..\..\Source\InterfaceDevice\HIDSystem.cpp" />
+    <ClCompile Include="..\..\Source\InterfaceDevice\KeyBoardManager.cpp" />
+    <ClCompile Include="..\..\Source\InterfaceDevice\MouseManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\BaseRenderEngine.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\GraphicsEngine.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\GraphicsObject.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Buffer\Buffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Buffer\ConstantBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Buffer\IndexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Buffer\VertexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Buffer\VertexFormat.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\DataFormat.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\GraphicsResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\RenderResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\RenderTargetResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\State\BlendState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\State\DepthStencilState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\State\RasterizerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\State\SamplerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\State\State.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\RenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture1D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture1DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture2D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture2DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\Texture3D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureCube.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureCubeArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureDepthStencil.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureRenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Resource\Texture\TextureSingle.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Shaders\PixelShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Shaders\ProgramFactory.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Shaders\Shader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Shaders\VertexShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Base\Shaders\VisualProgram.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\DirectXEngine.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\InputLayout\DirectXInputLayout.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\InputLayout\DirectXInputLayoutManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXConstantBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXIndexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXVertexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\DirectXResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\DirectXResourceChild.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXBlendState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXDepthStencilState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXRasterizerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXSamplerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXRenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture1D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture1DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture2D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture2DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture3D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureCube.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureCubeArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureDepthStencil.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureRenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureSingle.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\DirectXPixelShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\DirectXShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\DirectXVertexShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLByteAddressBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLConstantBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLProgramFactory.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLResourceBindInfo.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLSamplerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShader.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderFactory.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderType.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderVariable.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLTexture.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLTextureArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLVisualProgram.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Manager\RenderTargetManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\Manager\ResourceManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\InputLayout\OpenGLInputLayout.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\InputLayout\OpenGLInputLayoutManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\OpenGLEngine.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLConstantBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLIndexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLVertexBuffer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\OpenGLResource.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\OpenGLResourceChild.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLBlendState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLDepthStencilState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLRasterizerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLSamplerState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLState.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLRenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture1D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture1DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture2D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture2DArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture3D.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureCube.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureCubeArray.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureDepthStencil.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureRenderTarget.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureSingle.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLProgramFactory.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLReflection.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLVisualProgram.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\RenderSystem\Renderer\BaseRenderer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\RenderSystem\Renderer\DeferredRenderer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\RenderSystem\Renderer\ForwardRenderer.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\RenderSystem\RenderSystem.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\RenderSystem\VisualEffectManager.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\DirectionalLightEffect.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\GeometryPassEffect.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\GeometryPassWithNormalEffect.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\LightingPassEffect.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\SkyBoxEffect.cpp" />
+    <ClCompile Include="..\..\Source\Rendering\VisualEffect\VisualEffect.cpp" />
+    <ClCompile Include="..\..\Source\ResourceManager\GameResourceSystem.cpp" />
+    <ClCompile Include="..\..\Source\ResourceManager\ModelManager.cpp" />
+    <ClCompile Include="..\..\Source\ResourceManager\TextureManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Core\Application\Base\Application.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Base\ApplicationSetting.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Base\BaseWindow.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Base\Command.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Base\IMainLoop.h" />
+    <ClInclude Include="..\..\Source\Core\Application\GLFW\GLMainLoop.h" />
+    <ClInclude Include="..\..\Source\Core\Application\GLFW\GLWindow.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Windows\MSMainLoop.h" />
+    <ClInclude Include="..\..\Source\Core\Application\Windows\MSWindow.h" />
+    <ClInclude Include="..\..\Source\Core\Assert\AssertUtils.h" />
+    <ClInclude Include="..\..\Source\Core\Engine\MEngine.h" />
+    <ClInclude Include="..\..\Source\Core\Event\Base\EventSystem.h" />
+    <ClInclude Include="..\..\Source\Core\Event\Base\IEvent.h" />
+    <ClInclude Include="..\..\Source\Core\Event\Base\IEventListener.h" />
+    <ClInclude Include="..\..\Source\Core\Event\Extensions\HIDEvent\HIDEvent.h" />
+    <ClInclude Include="..\..\Source\Core\Event\GLFW\GLFWMessageLoop.h" />
+    <ClInclude Include="..\..\Source\Core\Event\Windows\MSMessageLoop.h" />
+    <ClInclude Include="..\..\Source\Core\Foundation\HName.h" />
+    <ClInclude Include="..\..\Source\Core\Foundation\HObject.h" />
+    <ClInclude Include="..\..\Source\Core\Logging\MLog.h" />
+    <ClInclude Include="..\..\Source\Core\Logging\MLogToFile.h" />
+    <ClInclude Include="..\..\Source\Core\Logging\MLogToOutputWindow.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\GraphicsMathematics.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\MathPreCompileHead.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\MathUtilities.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\MathUtils.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Matrix.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Matrix4f.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Quaternion.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4F.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4FPreCompileHeader.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4F_COMMON.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4F_SCALAR.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4F_SSE.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4x4F.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4x4F_SCALAR.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\SIMD\SIMD4X4F_SSE.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Vector.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Vector2f.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Vector3f.h" />
+    <ClInclude Include="..\..\Source\Core\Mathematics\Vector4f.h" />
+    <ClInclude Include="..\..\Source\Core\Memory\MemChunk.h" />
+    <ClInclude Include="..\..\Source\Core\Memory\MemPool.h" />
+    <ClInclude Include="..\..\Source\Core\Memory\MemStack.h" />
+    <ClInclude Include="..\..\Source\Core\Memory\MemTree.h" />
+    <ClInclude Include="..\..\Source\Core\StringUtils\StringUtils.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Base\Cameras.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Base\Lights.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Component.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Functional\ControllerComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Functional\FunctionalComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\CameraComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\DirectionalLightComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\FlashLightComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\LightComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\MeshComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\MTransform.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\PerspectiveCameraComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\PointLightComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\PrimitiveComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Component\Scene\SceneComponent.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Controller\CameraMotionController.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Controller\IController.h" />
+    <ClInclude Include="..\..\Source\GamePlay\Controller\MotionController.h" />
+    <ClInclude Include="..\..\Source\GamePlay\GameInstance.h" />
+    <ClInclude Include="..\..\Source\GamePlay\GameoObject\GameObject.h" />
+    <ClInclude Include="..\..\Source\GamePlay\World.h" />
+    <ClInclude Include="..\..\Source\GamePlay\WorldContext.h" />
+    <ClInclude Include="..\..\Source\GamePlay\World\WorldCameraManager.h" />
+    <ClInclude Include="..\..\Source\GamePlay\World\WorldLightManager.h" />
+    <ClInclude Include="..\..\Source\GamePlay\World\WorldUpdateManager.h" />
+    <ClInclude Include="..\..\Source\Independent\DataStructure\MSet.h" />
+    <ClInclude Include="..\..\Source\Independent\Env\Types.h" />
+    <ClInclude Include="..\..\Source\Independent\File\FileSystem.h" />
+    <ClInclude Include="..\..\Source\Independent\File\ImageLoader.h" />
+    <ClInclude Include="..\..\Source\Independent\File\Image\TexImage.h" />
+    <ClInclude Include="..\..\Source\Independent\File\ModelLoader.h" />
+    <ClInclude Include="..\..\Source\Independent\File\Model\Mesh.h" />
+    <ClInclude Include="..\..\Source\Independent\File\Model\Model.h" />
+    <ClInclude Include="..\..\Source\Independent\Platform\MEnigneDefine.h" />
+    <ClInclude Include="..\..\Source\Independent\Platform\PlatfomDefine.h" />
+    <ClInclude Include="..\..\Source\Independent\Platform\PreCompileHeader.h" />
+    <ClInclude Include="..\..\Source\Independent\Timer\MTime.h" />
+    <ClInclude Include="..\..\Source\Independent\Timer\MTimer.h" />
+    <ClInclude Include="..\..\Source\InterfaceDevice\HIDSystem.h" />
+    <ClInclude Include="..\..\Source\InterfaceDevice\KeyBoardManager.h" />
+    <ClInclude Include="..\..\Source\InterfaceDevice\MouseManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\BaseRenderEngine.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\DataBlockInShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\GraphicsEngine.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\GraphicsObject.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Buffer\Buffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Buffer\ConstantBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Buffer\IndexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Buffer\VertexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Buffer\VertexFormat.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\DataFormat.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\GraphicsResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\RenderResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\RenderTargetResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\State\BlendState.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\State\DepthStencilState.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\State\RasterizerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\State\SamplerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\State\State.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\RenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture1D.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture1DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture2D.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture2DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\Texture3D.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureCube.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureCubeArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureDepthStencil.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureRenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Resource\Texture\TextureSingle.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Shaders\PixelShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Shaders\ProgramFactory.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Shaders\Shader.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Shaders\VertexShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\Base\Shaders\VisualProgram.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\DirectXEngine.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\InputLayout\DirectXInputLayout.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\InputLayout\DirectXInputLayoutManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXConstantBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXIndexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Buffer\DirectXVertexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\DirectXResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\DirectXResourceChild.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXBlendState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXDepthStencilState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXRasterizerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXSamplerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\State\DirectXState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXRenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture1D.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture1DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture2D.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture2DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTexture3D.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureCube.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureCubeArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureDepthStencil.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureRenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Resource\Texture\DirectXTextureSingle.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\DirectXPixelShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\DirectXShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\DirectXVertexShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLByteAddressBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLConstantBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLProgramFactory.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLResourceBindInfo.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLSamplerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShader.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderFactory.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderType.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLShaderVariable.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLTexture.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLTextureArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\DirectX\Shaders\HLSL\HLSLVisualProgram.h" />
+    <ClInclude Include="..\..\Source\Rendering\Manager\InputLayoutManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\Manager\RenderTargetManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\Manager\ResourceManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\InputLayout\OpenGLInputLayout.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\InputLayout\OpenGLInputLayoutManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\OpenGLEngine.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLConstantBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLIndexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Buffer\OpenGLVertexBuffer.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\OpenGLResource.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\OpenGLResourceChild.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLBlendState.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLDepthStencilState.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLRasterizerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLSamplerState.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\State\OpenGLState.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLRenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture1D.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture1DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture2D.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture2DArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTexture3D.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureCube.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureCubeArray.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureDepthStencil.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureRenderTarget.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Resource\Texture\OpenGLTextureSingle.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLProgramFactory.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLReflection.h" />
+    <ClInclude Include="..\..\Source\Rendering\OpenGL\Shaders\GLSLVisualProgram.h" />
+    <ClInclude Include="..\..\Source\Rendering\RenderSystem\Renderer\BaseRenderer.h" />
+    <ClInclude Include="..\..\Source\Rendering\RenderSystem\Renderer\DeferredRenderer.h" />
+    <ClInclude Include="..\..\Source\Rendering\RenderSystem\Renderer\ForwardRenderer.h" />
+    <ClInclude Include="..\..\Source\Rendering\RenderSystem\RenderSystem.h" />
+    <ClInclude Include="..\..\Source\Rendering\RenderSystem\VisualEffectManager.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\DirectionalLightEffect.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\GeometryPassEffect.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\GeometryPassWithNormalEffect.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\LightingPassEffect.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\SkyBoxEffect.h" />
+    <ClInclude Include="..\..\Source\Rendering\VisualEffect\VisualEffect.h" />
+    <ClInclude Include="..\..\Source\ResourceManager\GameResourceSystem.h" />
+    <ClInclude Include="..\..\Source\ResourceManager\ModelManager.h" />
+    <ClInclude Include="..\..\Source\ResourceManager\TextureManager.h" />
+    <ClInclude Include="..\..\Source\ThirdParty\GraphicsKit\DirectXPreCompileHeader.h" />
+    <ClInclude Include="..\..\Source\ThirdParty\GraphicsKit\OpenGLPreCompileHeader.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B79DFD42-FBCC-4DC0-AC60-4779897E2CEE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MiracleEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\Library\glfw\include;$(SolutionDir)..\..\Library\glew\include;$(SolutionDir)..\..\Library\FreeImage\include;$(SolutionDir)..\..\Library\Assimp\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\Library\FreeImage\include;$(SolutionDir)..\..\Library\Assimp\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MIRACLEENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Source\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\Library\OpenGL</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>/NODEFAULTLIB</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;MIRACLEENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MIRACLEENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Source\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\Library\OpenGL;$(SolutionDir)..\..\Library\Assimp\lib32</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;MIRACLEENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

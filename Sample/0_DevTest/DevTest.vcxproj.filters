@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DefaultGameInstance.cpp" />
+    <ClCompile Include="DefaultWorldContext.cpp" />
+    <ClCompile Include="DisplayGunModelWorld.cpp" />
+    <ClCompile Include="DisplayFlashLightWorld.cpp" />
+    <ClCompile Include="DisplayMultipleLightsWorld.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DefaultGameInstance.h" />
+    <ClInclude Include="DefaultWorldContext.h" />
+    <ClInclude Include="DisplayGunModelWorld.h" />
+    <ClInclude Include="DisplayFlashLightWorld.h" />
+    <ClInclude Include="DisplayMultipleLightsWorld.h" />
+  </ItemGroup>
+</Project>
